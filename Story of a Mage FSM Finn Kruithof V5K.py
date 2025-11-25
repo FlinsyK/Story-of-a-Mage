@@ -27,7 +27,7 @@ states= {
         },
 
     "staat2A": {
-        "text": "De kracht barst los en daarmee werd ook jouw menselijke vormen de ruïne van Arcanum verwoest. Jij overleeft, maar jij en de wereld om je heen zijn veranderd. Je wordt een levende storm van magie die door de wereld raast om onheil te zaaien. Je wordt een onsterfelijke Mage, maar de mensheid vreest je.",
+        "text": "De kracht barst los en daarmee wordt ook jouw menselijke vorm en de ruïne van Arcanum verwoest. Jij overleeft, maar jij en de wereld om je heen zijn veranderd. Je wordt een levende storm van magie die door de wereld raast om onheil te zaaien. Je wordt een onsterfelijke Mage, maar de mensheid vreest je.",
         "choices": {
             "opnieuw starten": "staat1",
             "stop": "staat9"
@@ -161,7 +161,7 @@ def FSM(staat):
         while correctantwoord == False:
             for keuze in states[staat]["choices"]:
                 print(keuze)
-            invoer = input("wat is uw keuze")
+            invoer = input("wat is uw keuze: ")
             staat, correctantwoord = inputcheck(invoer, states[staat]["choices"],staat)
                 
 FSM("staat1")
